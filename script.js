@@ -1,16 +1,30 @@
-const password = getElementById("user-password");
-const confirmpw = getElementById("confirm-password");
+const password = document.getElementById("user-password");
+const confirmpw = document.getElementById("confirm-password");
 const submitbtn = document.querySelector(".create");
 const errormsg = document.querySelector(".error-unmatch");
+const successmsg = document.querySelector(".success");
+
+let match = false;
 
 function matchPw(){
-    if (password == confirmpw){
-        errormsg.textContent = ""
-        return true;
+
+    if(password.value == confirmpw.value){
+        match = true;
     }else{
-        errormsg.textContent = "Password does not match"
-        return false;
+        match = false;
+    }
+}
+
+function submit(){
+    matchPw();
+    if(match){
+        errormsg.textContent = "";
+        successmsg.textContent = "Account created sucessfully";
+    }else{
+        errormsg.textContent = "Password does not match!";
+        successmsg.textContent = "";
     }
 }
 
 confirmpw.addEventListener("change", matchPw);
+submitbtn.addEventListener("click", submit);
