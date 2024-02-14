@@ -1,0 +1,82 @@
+html, body{
+    background-color: rgb(233, 233, 233);
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+}
+
+.sign-up{
+    align-self: center;
+}
+
+.cover{
+    flex: 1 1 auto;
+    min-width: 300px;
+    max-width: 800px;
+    background-image: url("pictures/img.jpg");
+    background-size: cover;
+    box-shadow: 5px 8px 8px rgb(41, 41, 41);
+}
+
+.container{
+    flex: 1.2 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 800px;
+    padding: 50px;
+    flex-wrap: wrap;
+    gap: 20px;
+    
+}
+
+.form-container{
+    color: black;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 4px 8px 16px rgb(88, 88, 88);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    overflow: auto;
+    flex-wrap: wrap;
+    
+}
+
+.name,
+.user-details,
+.password{
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.input-container{
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    height: 20px;
+    width: 240px;
+}
+
+input:focus{
+    border-color: blue;
+}
+
+button{
+    border-radius: 15px;
+    border: none;
+    width: 150px;
+    height: 35px;
+    background-color: rgb(50, 104, 204);
+    color: white
+}
