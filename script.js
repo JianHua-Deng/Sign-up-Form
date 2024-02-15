@@ -16,13 +16,14 @@ function matchPw(){
 }
 
 function submit(){
-    matchPw();
-    if(match){
-        errormsg.textContent = "";
-        successmsg.textContent = "Account created sucessfully";
-    }else{
-        errormsg.textContent = "Password does not match!";
-        successmsg.textContent = "";
+    if(password.value != ""){
+        matchPw();
+        if(match){
+            errormsg.textContent = "";
+        }else{
+            errormsg.textContent = "Password does not match!";
+            successmsg.textContent = "";
+        }
     }
 }
 
